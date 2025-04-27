@@ -166,5 +166,8 @@ def chat():
 
     return str(assistant_reply)
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8080, debug=True)
+# if __name__ == '__main__':
+#     app.run(host="0.0.0.0", port=8080, debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080, debug=False, use_reloader=False, use_debugger=False)
+
