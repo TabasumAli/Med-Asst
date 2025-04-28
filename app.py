@@ -106,7 +106,11 @@ openai.api_key = AIML_API_KEY
 openai.api_base = "https://api.aimlapi.com/v1"
 
 # Initialize embeddings
-embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+# embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+embeddings = HuggingFaceEmbeddings(
+    model_name='sentence-transformers/all-MiniLM-L6-v2',
+    model_kwargs={"device": "cpu"}
+)
 
 # Initialize Pinecone
 index_name = "medicalchatbot"
